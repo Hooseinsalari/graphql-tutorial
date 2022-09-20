@@ -1,20 +1,9 @@
 import React from "react";
 
 // apollo
-import { gql, useMutation } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 
-const CREATE_USER = gql`
-  mutation getUser($name: String!, $username: String!, $email: String!) {
-    createUser (
-      input: { name: $name, username: $username, email: $email }
-    ) {
-      id
-      name
-      username
-      email
-    }
-  }
-`;
+import { CREATE_USER } from "../graphql/mutations";
 
 const CreateUser = () => {
     const [createUser, {loading, data, error, called}] = useMutation(CREATE_USER, {

@@ -1,12 +1,8 @@
 import React from "react";
 
-import { gql, useMutation } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 
-const DELETE_USER = gql`
-  mutation {
-    deleteUser(id: 1)
-  }
-`;
+import { DELETE_USER } from "../graphql/mutations";
 
 const DeleteUser = () => {
   const [deleteUser, { loading, data, error, called }] = useMutation(DELETE_USER);

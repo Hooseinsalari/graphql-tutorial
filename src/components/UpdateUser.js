@@ -1,19 +1,9 @@
 import React from "react";
 
 // apollo
-import { gql, useMutation } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 
-const UPDATE_USER = gql`
-  mutation updateUser($id: ID!, $name: String!, $phone: String!) {
-    updateUser(id: $id, input: { name: $name, phone: $phone }) {
-      id
-      name
-      username
-      phone
-      email
-    }
-  }
-`;
+import { UPDATE_USER } from "../graphql/mutations";
 
 const UpdateUser = () => {
   const [updateUser, { loading, data, error, called }] = useMutation(UPDATE_USER, {
