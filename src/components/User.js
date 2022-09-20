@@ -1,18 +1,10 @@
 import React, { useState } from "react";
 
 // apollo
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 
-const GET_USER = gql`
-  query getUser($id: ID!){
-    user(id: $id) {
-      id
-      name
-      email
-      username
-    }
-  }
-`;
+// query
+import { GET_USER } from "../graphql/queries";
 
 const User = () => {
   const [id, setId] = useState("5");
