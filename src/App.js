@@ -5,7 +5,8 @@ import "./App.css";
 // import User from "./components/User";
 // import UserOnClick from "./components/UserOnClick";
 // import CreateUser from "./components/CreateUser";
-import UpdateUser from "./components/UpdateUser";
+// import UpdateUser from "./components/UpdateUser";
+import DeleteUser from "./components/DeleteUser";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       {/* <User /> */}
       {/* <UserOnClick /> */}
       {/* <CreateUser /> */}
-      <UpdateUser />
+      {/* <UpdateUser /> */}
+      <DeleteUser />
     </div>
   );
 }
